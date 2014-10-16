@@ -6,8 +6,6 @@ public class Pelicula{
 
 	private String titulo;
 	private String genero;
-	//protected String resumen;
-	//protected String director;
 	private int num_votos;
 	
 	public Pelicula(String titulo, String genero,int num_votos){

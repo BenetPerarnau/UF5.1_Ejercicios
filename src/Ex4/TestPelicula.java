@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.ListIterator;
 
 
 public class TestPelicula {
@@ -60,16 +61,15 @@ public class TestPelicula {
 					Collections.sort(bbdd2,new OrdenarPorVotos());
 					
 					System.out.println("Imprimir Iterator");
-					Iterator <Pelicula> elements=bbdd2.iterator();
+					System.out.println("Nº V\tTitulo");
+					ListIterator <Pelicula> elements=bbdd2.listIterator();
+					
+					Pelicula a;
+					
 					while(elements.hasNext()){
-						System.out.println(elements.next().getNum_votos()+"\t"+elements.next().getTitulo());
+						a=elements.next();
+						System.out.println(a.getNum_votos()+" "+a.getTitulo());
 					}
-					System.out.println("Imprimir diferent");
-					for(Object o:bbdd2){
-						System.out.println(((Pelicula)o).getNum_votos()+"\t"+((Pelicula)o).getNum_votos());
-					}
-					
-					
 				}
 				break;
 			case 3://ordenar por genero (si es mismo genero por numero de votos)
@@ -79,15 +79,17 @@ public class TestPelicula {
 				}else{
 						
 					Collections.sort(bbdd2, new OrdenarPorGenero());
-
+					
+					Iterator <Pelicula> elemnts=bbdd2.iterator();
+					Pelicula a;
 					System.out.println("Genero\t\tNº");
-					for(int i=0; i<bbdd2.size(); i++){
-						System.out.println(bbdd2.get(i).getGenero()+"\t\t"+bbdd2.get(i).getNum_votos());
-					}
+					while(elemnts.hasNext()){
+						a=elemnts.next();
+						System.out.println(a.getGenero()+"\t\t"+a.getNum_votos());
+					}				
 				}
 				break;
-			case 4://salir
-				
+			case 4://salir			
 					System.out.println("Dew.");
 				break;
 				default:
@@ -100,6 +102,5 @@ public class TestPelicula {
 					break;
 			}
 		}while(op!=4);
-
-	}
+    }
 }
