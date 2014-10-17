@@ -2,9 +2,7 @@ package Ex1;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Comparator;
 import java.util.Date;
-import java.util.Queue;
 
 public class Empleado implements Comparable<Empleado>{
 
@@ -17,24 +15,17 @@ public class Empleado implements Comparable<Empleado>{
 		this.nombre=nombre;
 		this.apellido=apellido;
 		this.id=id;
-		SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");//MM mayusculas si no lo entiende como si fueran minutos
 		try {
 			this.data=formatter.parse(date);
 		} catch (ParseException e) {
-			e.printStackTrace();
+			System.out.println("El formato de entrada de la data tiene que ser dd-mm-yyyy");
 		}
 	}
-
-
+	
 	protected Date getData() {
 		return data;
 	}
-
-
-	protected void setData(Date data) {
-		this.data = data;
-	}
-
 
 	protected String getNombre() {
 		return nombre;
@@ -48,10 +39,9 @@ public class Empleado implements Comparable<Empleado>{
 		return id;
 	}
 
-	
 	public int compareTo(Empleado o) {
 		
-		return this.data.compareTo(o.getData());
+		return this.getData().compareTo(o.getData());
 		
 	}
 	

@@ -13,5 +13,4 @@ public class OrdenarPorVotos implements Comparator {
 		}
 		return aux;	
 	}
-
 }

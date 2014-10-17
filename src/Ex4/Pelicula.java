@@ -1,7 +1,4 @@
 package Ex4;
-
-import java.util.Comparator;
-
 public class Pelicula{
 
 	private String titulo;

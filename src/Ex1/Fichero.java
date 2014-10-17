@@ -30,15 +30,14 @@ public class Fichero {
 			String linea="";
 			
 			while((linea=br.readLine())!=null){
-				if(aux!=0){
+				if(aux!=0){//para que no leea la primera linea del fichero
 				String[] contenido=linea.split(";");
 				queue.add(new Empleado(contenido[0],contenido[1],contenido[2],contenido[3]));
-				
 				}
 				aux=1;		
 			}				
 		}catch(Exception e){
-			System.out.println("Erro en leer el archivo");
+			System.out.println("Erro en leer el archivo.");
 		}	
 		return queue;
 	}

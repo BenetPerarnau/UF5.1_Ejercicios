@@ -1,11 +1,6 @@
 package Ex1;
 
-import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -19,7 +14,6 @@ import java.util.Queue;
 
 public class TestEmpleado {
 	
-	
 	public static void main(String[] args) {
 		Queue<Empleado> queue=new PriorityQueue<Empleado>();
 		
@@ -29,9 +23,9 @@ public class TestEmpleado {
 		byte i=1;
 		Empleado a;
 		while ((a=queue.poll())!=null){
-			SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
+			SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");//MM mayusculas si no lo entiende como si fueran minutos
 			System.out.println("Empleado premiado mes "+i+": "+a.getNombre()+" "+a.getApellido()+"\t"+formatter.format(a.getData()));
-			i++;	
+			i++;
 		}
 	}
 }
