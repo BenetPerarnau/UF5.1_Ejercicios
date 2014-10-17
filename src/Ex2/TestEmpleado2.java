@@ -15,16 +15,14 @@ import Ex1.Empleado;
 import Ex1.Fichero;
 
 /*
- * La empresa del ejercicio anterior se dedica a la fabricación de juguetes.
+ * La empresa se dedica a la fabricación de juguetes.
  * El director decide que pondrá el nombre de los siguientes juguetes que saque al mercado según la lista de los nombres
  * de sus empleados (firstname). Crea un programa en Java que le permita disponer de esta lista de nombres ordenados
  * alfabéticamente, haciendo uso de la clase de la plataforma Java que implemente la interfaz Set que consideres más apropiada:
  */
 public class TestEmpleado2 {
 	
-	
 	public static void main(String[] args) {
-		
 		
 		Set<Empleado2> set=new TreeSet<Empleado2>();
 		
@@ -33,15 +31,7 @@ public class TestEmpleado2 {
 		Iterator it=set.iterator();
 		
 		while(it.hasNext()){
-			
-			System.out.println("Empleado "+((Empleado2)it.next()).getNombre());
-			
+			System.out.println("Empleado => "+((Empleado2)it.next()).getNombre());	
 		}
-		
-		
-		
-		
-
 	}
-
 }

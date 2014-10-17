@@ -1,10 +1,5 @@
 package Ex2;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Queue;
-import java.util.SortedSet;
-
 public class Empleado2 implements Comparable<Empleado2>{
 
 	private String nombre;
@@ -35,13 +30,7 @@ public class Empleado2 implements Comparable<Empleado2>{
 		return id;
 	}
 
-	@Override
 	public int compareTo(Empleado2 o) {
 		return this.nombre.compareTo(o.getNombre());
 	}
-
-
-
-
-	
 }

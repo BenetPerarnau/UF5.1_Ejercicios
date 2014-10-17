@@ -17,11 +17,11 @@ public class Empleado3 implements Comparable<Empleado3>{
 		this.nombre=nombre;
 		this.apellido=apellido;
 		this.id=id;
-		SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 		try {
 			this.data=formatter.parse(date);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
