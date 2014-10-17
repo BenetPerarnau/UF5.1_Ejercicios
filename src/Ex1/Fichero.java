@@ -35,15 +35,11 @@ public class Fichero {
 				queue.add(new Empleado(contenido[0],contenido[1],contenido[2],contenido[3]));
 				
 				}
-				aux=1;
-				
-			}
-				
+				aux=1;		
+			}				
 		}catch(Exception e){
 			System.out.println("Erro en leer el archivo");
-		}
-		
+		}	
 		return queue;
 	}
-
 }
